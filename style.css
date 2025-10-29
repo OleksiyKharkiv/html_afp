@@ -1,0 +1,17 @@
+/*tag*/
+nav {
+    height: 75px;
+    background-color: hotpink;
+}
+
+/*class*/
+.hero {
+    background: url("assets/meme1.jpg") no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+/*ID*/
+#hero-1 {
+    background: url("assets/meme2.jpg") no-repeat;
+    background-size: cover;
+}
