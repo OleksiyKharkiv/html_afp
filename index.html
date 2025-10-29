@@ -31,6 +31,8 @@
 
 <section></section>
 <main>
+    <audio src="assets/panda-eating-bamboo-276086.mp3" controls></audio>
+    <video src="assets/nature.mp4" controls ></video>
     <section>
         <div class="stage">
             <img class="card" src="https://picsum.photos/400/300" alt="photo">
@@ -46,7 +48,10 @@
         </ol>
     </section>
     <br>
-
+    <button id="playMusic">🎵 Play music </button>
+    <audio id="bgMusic" loop>
+        <source src="assets/panda-eating-bamboo-276086.mp3" type="audio/mpeg">
+    </audio>
     <article>
     </article>
 
@@ -56,5 +61,14 @@
     Impressum Datenschutzt
 </footer>
 </body>
+<script>
+    const btn = document.getElementById('playMusic');
+    const music = document.getElementById('bgMusic');
+
+    btn.addEventListener('click', () => {
+        music.play();
+        btn.style.display = 'none'; // скрываем кнопку после запуска
+    });
+</script>
 
 </html>
