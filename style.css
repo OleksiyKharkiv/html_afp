@@ -12,7 +12,9 @@
 nav {
     height: 50px;
     background-color: var(--background1);
-    margin: var(--margin1);
+    margin-bottom: var(--margin1);
+    top: 1rem;
+    position: sticky;
 }
 
 /*class*/
@@ -25,4 +27,19 @@ nav {
 #hero-1 {
     background: url("assets/meme2.jpg") no-repeat;
     background-size: cover;
+}
+h1 {
+    margin-top: 100px;
+    color: #e600ff;
+}
+body{
+    /*overflow-y: hidden;*/
+}
+ul, ol {
+    background-color: aqua;
+    margin-left: 2rem;
+    li {
+        color: blueviolet;
+        font-size: 1.5rem;
+    }
 }
