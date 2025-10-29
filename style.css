@@ -1,7 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background1: #6892a1;
+    --margin1: 0.5rem;
+}
+
 /*tag*/
 nav {
     height: 50px;
-    background-color: hotpink;
+    background-color: var(--background1);
+    margin: var(--margin1);
 }
 
 /*class*/
