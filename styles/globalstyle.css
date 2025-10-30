@@ -1,0 +1,49 @@
+{
+    margin: 0
+;
+    padding: 0
+;
+    box-sizing: border-box
+;
+}
+:root {
+    --font-color-dark: #201c1c;
+    --font-color-light: #e3df95;
+    --background-dark: #706464;
+    --background-light: #8a6923;
+}
+
+header {
+    display: flex;
+    grid-template-columns: 1fr 5fr;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--background-dark);
+    height: 5em;
+}
+
+.logo {
+    height: 100%;
+    padding: 1em;
+
+    img {
+        transform: rotate(0deg);
+        box-shadow: 0 0 10px 10px var(--background-dark);
+        animation: spin 2s linear infinite;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--font-color-light);
+        padding: 1em;
+        font-size: 1.2em;
+        transition: all 0.3s ease-in-out;
+    }
+
+}
