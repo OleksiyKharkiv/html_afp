@@ -48,6 +48,7 @@ nav {
         font-size: 1.2em;
         transition: all 0.3s ease-in-out;
     }
+
     a:hover {
         background-color: var(--background-light);
         color: var(--font-color-dark);
@@ -57,35 +58,50 @@ nav {
 body {
     background: url("../assets/birds.jpeg") no-repeat center center fixed;
 }
+
 .hero {
     height: 55vh;
     margin: 12rem 3em;
     background: url("../assets/pool_palms.jpeg") no-repeat center;
 }
-span{
+
+span {
     color: var(--font-color-light);
     font-size: 1.1rem;
     font-weight: bold;
 }
-#search{
-    background-color: var(--font-color-light);
-    border-radius: 40px;
-    border: none;
-    padding: 0.2rem;
-}
-#search-input{
+
+#search-input {
     display: flex;
     justify-content: end;
     align-items: end;
     margin-bottom: 0.3rem;
     margin-right: 0.3rem;
+
+    #search{
+        position: absolute;
+        background-color: var(--font-color-light);
+        border-radius: 45px;
+        width: 0;
+        border: none;
+        height: 1.5rem;
+    }
+
+    .material-symbols-outlined{
+        position: absolute;
+        background-color: var(--font-color-light);
+        border-radius: 50%;
+        height: 1.5rem;
+        /* z-index: 999; */
+    }
 }
-#search-input:hover
-{
-    background-color: var(--background-light);
-}
-.material-symbols-outlined {
-    /*background-color: var(--background-light);*/
-    color: var(--font-color-light);
-    border-radius: 40px;
+
+#search-input:hover,
+#search-input:focus-within {
+
+    #search{
+        transition: 300ms;
+        width: 240px;
+        padding-left: 0.5rem;
+    }
 }
