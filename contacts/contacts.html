@@ -2,9 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <link rel="stylesheet" href="styles/style.css">-->
+    <link rel="stylesheet" href="../styles/globalstyle.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+    <link rel="icon" href="../assets/icons8-home-16.png" type="image/x-icon">
+    <meta name="description" content="This is a description of the page">
+    <title>Home</title>
+
+
 </head>
 <body>
+<header>
+    <div class="logo">
+        <button onclick="window.location.href='#'">
+            <img src="../assets/icons8-sea-50.png" alt="Company Logo">
+        </button>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
 
+    <div id="search-input" tabindex="0">
+        <input type="text" name="search" id="search">
+        <span class="material-symbols-outlined">
+                search
+            </span>
+    </div>
+</header>
+<main>
+    <div class="hero">
+        <form method="post">
+            <input type="text" name="name" id="Name" placeholder="*Name" required> <br>
+            <input type="email" name="email" id="Email" placeholder="*Email" required> <br>
+            <input type="tel" name="phone" id="Phone" placeholder="Phone"><br>
+            <input type="text" name="subject" id="Subject" placeholder="Subject"><br>
+            <input type="text" name="company" id="Company" placeholder="Company"><br>
+            <input type="text" name="website" id="Website" placeholder="Website"><br>
+            <textarea name="message" id="Message" placeholder="*Message" required></textarea><br>
+            <input type="submit" value="Send"><br>
+            <p>Fields marked with * are required</p>
+        </form>
+    </div>
+</main>
+<footer>
+    <a href="impressum.html"> Impressum</a>
+    <a href="datenschutz.html"> Datenschutz</a>
+    <a href="contacts.html"> Contacts</a>
+</footer>
+<script>
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', function (e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const links = document.querySelectorAll('nav a');
+
+        links.forEach(link => {
+            const text = link.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+                link.style.display = 'block';
+            } else {
+                link.style.display = 'none';
+            }
+        });
+    })
+</script>
 </body>
 </html>
